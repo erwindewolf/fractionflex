@@ -1,0 +1,327 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Fractionflex, A stylesheet to make flexible lay-outs based on css flex.
+   Copyright 2016 Erwin de Wolf, www.fractionflex.com.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+*/
+
+html, body {
+	height:100%;
+	width:100%;
+	min-height:100%;
+	max-width:100%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1) {
+::i-block-chrome, body {
+height:auto
+}
+}
+body {
+	display:-webkit-box;
+	display:-ms-flex;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-direction:column
+}
+.flex-row, .nested-column {
+	min-height:1px;
+	display:-webkit-box;
+	display:-ms-flex;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-lines:multiple;
+	-webkit-box-flex:0 0 auto;
+	-ms-flex:0 0 auto;
+	-webkit-flex:0 0 auto;
+	flex:0 0 auto;
+	-webkit-box-orient:vertical;
+	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-direction:column;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	-webkit-justify-content:space-between;
+	justify-content:space-between
+}
+.fill-height {
+	-webkit-box-flex:1 0 auto;
+	-ms-flex:1 0 auto;
+	-webkit-flex:1 0 auto;
+	flex:1 0 auto
+}
+.flex-column {
+	min-height:1px;
+	display:-webkit-box;
+	display:-ms-flex;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-flex:1 0 auto;
+	-ms-flex:1 0 auto;
+	-webkit-flex:1 0 auto;
+	flex:1 0 auto;
+	-webkit-box-orient:vertical;
+	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-direction:column
+}
+.do-start {
+	-webkit-box-align:start;
+	-ms-flex-align:start;
+	-webkit-align-items:flex-start;
+	align-items:flex-start
+}
+.do-center {
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	-webkit-align-items:center;
+	align-items:center
+}
+.do-end {
+	-webkit-box-align:end;
+	-ms-flex-align:end;
+	-webkit-align-items:flex-end;
+	align-items:flex-end
+}
+.set-start {
+	-webkit-box-pack:start;
+	-ms-flex-pack:start;
+	-webkit-justify-content:flex-start;
+	justify-content:flex-start
+}
+.set-center {
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	-webkit-justify-content:center;
+	justify-content:center
+}
+.set-end {
+	-webkit-box-pack:end;
+	-ms-flex-pack:end;
+	-webkit-justify-content:flex-end;
+	justify-content:flex-end
+}
+.vertical {
+	min-height:1px;
+	max-width:100%;
+	display:-webkit-box;
+	display:-ms-flex;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-flex:0 0 auto;
+	-ms-flex:0 0 auto;
+	-webkit-flex:0 0 auto;
+	flex:0 0 auto;
+	-webkit-box-orient:vertical;
+	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-direction:column;
+}
+.horizontal {
+	min-height:1px;
+	max-width:100%;
+	-webkit-box-orient:inline-axis;
+	display:-ms-inline-flexbox;
+	display:-webkit-inline-flex;
+	display:inline-flex;
+	-webkit-box-flex:0 0 auto !important;
+	-ms-flex:0 0 auto !important;
+	-webkit-flex:0 0 auto!important;
+	flex:0 0 auto !important;
+	-webkit-box-lines:multiple;
+	-ms-flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap
+}
+.items-around {
+	-ms-flex-pack:distribute;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+	-webkit-box-flex:1 0 auto;
+	-ms-flex:1 0 auto;
+	-webkit-flex:1 0 auto;
+	flex:1 0 auto
+}
+.items-between {
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+	-webkit-box-flex:1 0 auto;
+	-ms-flex:1 0 auto;
+	-webkit-flex:1 0 auto;
+	flex:1 0 auto
+}
+@media (min-width:800px) {
+.fr1-1 {
+	-webkit-box-flex:1;
+	-ms-flex:1;
+	-webkit-flex:1;
+	flex:1
+}
+.fr1-11, .fr1-7 {
+	-webkit-box-flex:3;
+	-ms-flex:3;
+	-webkit-flex:3;
+	flex:3
+}
+.fr1-10, .fr1-12, .fr2-11, .fr2-7 {
+	-webkit-box-flex:6;
+	-ms-flex:6;
+	-webkit-flex:6;
+	flex:6
+}
+.fr1-9 {
+	-webkit-box-flex:8;
+	-ms-flex:8;
+	-webkit-flex:8;
+	flex:8
+}
+.fr1-8, .fr3-11, .fr3-7 {
+	-webkit-box-flex:9;
+	-ms-flex:9;
+	-webkit-flex:9;
+	flex:9
+}
+.fr1-5, .fr1-6, .fr2-10, .fr2-12, .fr4-11, .fr4-7 {
+	-webkit-box-flex:12;
+	-ms-flex:12;
+	-webkit-flex:12;
+	flex:12
+}
+.fr5-11, .fr5-7 {
+	-webkit-box-flex:15;
+	-ms-flex:15;
+	-webkit-flex:15;
+	flex:15
+}
+.fr2-9 {
+	-webkit-box-flex:16;
+	-ms-flex:16;
+	-webkit-flex:16;
+	flex:16
+}
+.fr1-4, .fr2-8, .fr3-10, .fr3-12, .fr6-11, .fr6-7 {
+	-webkit-box-flex:18;
+	-ms-flex:18;
+	-webkit-flex:18;
+	flex:18
+}
+.fr7-11 {
+	-webkit-box-flex:21;
+	-ms-flex:21;
+	-webkit-flex:21;
+	flex:21
+}
+.fr1-3, .fr2-5, .fr2-6, .fr3-9, .fr4-10, .fr4-12, .fr8-11 {
+	-webkit-box-flex:24;
+	-ms-flex:24;
+	-webkit-flex:24;
+	flex:24
+}
+.fr3-8, .fr9-11 {
+	-webkit-box-flex:27;
+	-ms-flex:27;
+	-webkit-flex:27;
+	flex:27
+}
+.fr10-11, .fr5-10, .fr5-12 {
+	-webkit-box-flex:30;
+	-ms-flex:30;
+	-webkit-flex:30;
+	flex:30
+}
+.fr4-9 {
+	-webkit-box-flex:32;
+	-ms-flex:32;
+	-webkit-flex:32;
+	flex:32
+}
+.fr1-2, .fr2-4, .fr3-5, .fr3-6, .fr4-8, .fr6-10, .fr6-12 {
+	-webkit-box-flex:36;
+	-ms-flex:36;
+	-webkit-flex:36;
+	flex:36
+}
+.fr5-9 {
+	-webkit-box-flex:40;
+	-ms-flex:40;
+	-webkit-flex:40;
+	flex:40
+}
+.fr7-10, .fr7-12 {
+	-webkit-box-flex:42;
+	-ms-flex:42;
+	-webkit-flex:42;
+	flex:42
+}
+.fr5-8 {
+	-webkit-box-flex:45;
+	-ms-flex:45;
+	-webkit-flex:45;
+	flex:45
+}
+.fr2-3, .fr4-5, .fr4-6, .fr6-9, .fr8-10, .fr8-12 {
+	-webkit-box-flex:48;
+	-ms-flex:48;
+	-webkit-flex:48;
+	flex:48
+}
+.fr3-4, .fr6-8, .fr9-10 {
+	-webkit-box-flex:54;
+	-ms-flex:54;
+	-webkit-flex:54;
+	flex:54
+}
+.fr7-9, .fr9-12 {
+	-webkit-box-flex:56;
+	-ms-flex:56;
+	-webkit-flex:56;
+	flex:56
+}
+.fr10-12, .fr5-6 {
+	-webkit-box-flex:60;
+	-ms-flex:60;
+	-webkit-flex:60;
+	flex:60
+}
+.fr7-8 {
+	-webkit-box-flex:63;
+	-ms-flex:63;
+	-webkit-flex:63;
+	flex:63
+}
+.fr8-9 {
+	-webkit-box-flex:64;
+	-ms-flex:64;
+	-webkit-flex:64;
+	flex:64
+}
+.fr11-12 {
+	-webkit-box-flex:66;
+	-ms-flex:66;
+	-webkit-flex:66;
+	flex:66
+}
+.flex-row {
+	-webkit-box-orient:horizontal;
+	-webkit-flex-direction:row;
+	-ms-flex-direction:row;
+	flex-direction:row
+}
+}
